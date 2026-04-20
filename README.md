@@ -1,4 +1,4 @@
-# y-e
+# Yohana & Emil Wedding RSVP Website
 
 ## Google Sheets RSVP Setup
 
