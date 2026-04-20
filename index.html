@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emil & Yohana | Wedding RSVP</title>
+  <meta name="description" content="RSVP for Emil and Yohana's wedding, view details, dress code FAQs, and gift list information." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-wrap">
+    <div class="leaf-orb one" aria-hidden="true"></div>
+    <div class="leaf-orb two" aria-hidden="true"></div>
+
+    <header class="hero">
+      <p class="eyebrow">You Are Invited</p>
+      <h1>Emil <span>&</span> Yohana</h1>
+      <p class="subtitle">
+        Join us as we celebrate our wedding day with love, laughter, and joyful memories.
+      </p>
+
+      <div class="event-grid" aria-label="Wedding details">
+        <article class="event-card">
+          <strong>Date</strong>
+          Saturday, 24 October 2026
+        </article>
+        <article class="event-card">
+          <strong>Time</strong>
+          3:00 PM Ceremony
+        </article>
+        <article class="event-card">
+          <strong>Venue</strong>
+          The Green Garden Hall
+        </article>
+      </div>
+    </header>
+
+    <main class="content-grid">
+      <section class="panel" id="rsvp" aria-labelledby="rsvp-title">
+        <h2 id="rsvp-title">RSVP</h2>
+        <p class="muted">Please let us know by 1 September 2026.</p>
+
+        <form action="#" method="post">
+          <div class="field">
+            <label for="fullName">Full Name</label>
+            <input id="fullName" name="fullName" type="text" placeholder="Your name" required />
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+
+          <div class="field">
+            <label for="attendance">Will you attend?</label>
+            <select id="attendance" name="attendance" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="yes">Gladly attending</option>
+              <option value="no">Regretfully unable</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="guests">Number of Guests</label>
+            <input id="guests" name="guests" type="number" min="1" max="4" value="1" />
+          </div>
+
+          <div class="field full">
+            <label for="dietary">Dietary Restrictions</label>
+            <input id="dietary" name="dietary" type="text" placeholder="Let us know if any" />
+          </div>
+
+          <div class="field full">
+            <label for="message">Message for the Couple</label>
+            <textarea id="message" name="message" placeholder="A short note..."></textarea>
+          </div>
+
+          <div class="field full">
+            <button type="submit">Send RSVP</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="panel" aria-labelledby="faq-title">
+        <h2 id="faq-title">FAQ</h2>
+        <p class="muted">Helpful details for your visit.</p>
+
+        <details open>
+          <summary>What should I wear?</summary>
+          <p>
+            Dress code is <strong>semi-formal in soft or earthy tones</strong>. Please avoid neon colors so photos keep a cohesive garden look.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can I bring my children?</summary>
+          <p>
+            We love little ones. Please include them in your RSVP guest count so we can prepare seating and meals.
+          </p>
+        </details>
+
+        <details>
+          <summary>Is there parking at the venue?</summary>
+          <p>
+            Yes, free parking is available at the main gate, with ushers to help direct you.
+          </p>
+        </details>
+
+        <details>
+          <summary>Do you have a gift list?</summary>
+          <p>
+            Yes. You can scan the QR code below to view our gift list and contribution options.
+          </p>
+        </details>
+
+        <h2 style="margin-top: 20px;">Gift List</h2>
+        <div class="qr-box" role="img" aria-label="QR code placeholder for gift list">
+          QR Code
+          <br />
+          Gift List Placeholder
+        </div>
+        <p class="gift-note">
+          Replace this placeholder with your real QR image when ready.
+        </p>
+      </aside>
+    </main>
+
+    <footer>
+      With love, Emil & Yohana • Thank you for celebrating with us
+    </footer>
+  </div>
+</body>
+</html>
