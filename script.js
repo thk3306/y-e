@@ -1,10 +1,20 @@
 const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw92uXObud6Fo8rLqMPpl9txJLHLbh-dfJVcb_DRdjxP8XCzs4MB9ICQdnmV5AlLOpq7Q/exec";
 const form = document.getElementById("rsvp-form");
 const statusMessage = document.getElementById("form-status");
+const submitButton = document.getElementById("submit-btn");
 
 function setStatus(message, state) {
   statusMessage.textContent = message;
   statusMessage.dataset.state = state;
+}
+
+function setSubmitLoading(isLoading) {
+  if (!submitButton) {
+    return;
+  }
+
+  submitButton.disabled = isLoading;
+  submitButton.classList.toggle("is-loading", isLoading);
 }
 
 form.addEventListener("submit", async (event) => {
@@ -19,6 +29,7 @@ form.addEventListener("submit", async (event) => {
   const payload = new URLSearchParams(formData);
 
   try {
+    setSubmitLoading(true);
     setStatus("Sending your RSVP...", "pending");
 
     await fetch(GOOGLE_APPS_SCRIPT_URL, {
@@ -31,6 +42,8 @@ form.addEventListener("submit", async (event) => {
     setStatus("Thanks. Your RSVP has been sent.", "success");
   } catch (error) {
     setStatus("Something went wrong while sending your RSVP. Please try again.", "error");
+  } finally {
+    setSubmitLoading(false);
   }
 });
 
